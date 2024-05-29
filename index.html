@@ -3,9 +3,48 @@
     <head>
         <title>Test Javascript</title>
         <meta charset="UTF-8">
+        <style>
+
+            html {
+                font-family: sans-serif;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .a11y-label {
+                margin: 0;
+                text-align: right;
+                font-size: 0.7rem;
+                width: 98%;
+            }
+
+            body {
+                margin: 10px;
+                background: #f5f9fa;
+            }
+
+        </style>
     </head>
-    <body>
-        
+    <body onload="blastWave()">
+        <script>
+            function blastWave(){
+                const output=document.querySelector('.output')
+                const para= doucment.createElement('p');
+
+                for(let i=10; i<0; i--){
+                    para.textContent=i;
+                    output.appendChild(para);
+
+                }
+
+            }
+        </script>
+
+        <div class="output">
+
+        </div>
 
 
 
