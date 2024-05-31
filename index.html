@@ -1,54 +1,38 @@
 <!DOCTYPE html>
-<html lang="it-IT">
+<html>
     <head>
-        <title>Test Javascript</title>
-        <meta charset="UTF-8">
-        <style>
+        <title>Che palle</title>
 
-            html {
-                font-family: sans-serif;
-            }
-
-            h2 {
-                font-size: 16px;
-            }
-
-            .a11y-label {
-                margin: 0;
-                text-align: right;
-                font-size: 0.7rem;
-                width: 98%;
-            }
-
-            body {
-                margin: 10px;
-                background: #f5f9fa;
-            }
-
-        </style>
-    </head>
-    <body onload="blastWave()">
-        <script>
+        <script type="text/javascript">
             function blastWave(){
-                const output=document.querySelector('.output')
-                const para= doucment.createElement('p');
 
-                for(let i=10; i<0; i--){
-                    para.textContent=i;
+                output= document.querySelector('.output');
+
+                for(let i=10; i>=0; i--){
+                    const para = document.createElement('p');
+                    if(i!=0){
+                        para.textContent= i;
+                    }
+                    else if(i==0){
+                        para.textContent='Fucking blast now!';
+                    }
                     output.appendChild(para);
-
                 }
 
             }
         </script>
+    </head>
+<body>
 
-        <div class="output">
+    <h2>What Can JavaScript Do?</h2>
 
-        </div>
+    <p id="demo">JavaScript can change HTML content.</p>
 
+    <button type="button" onclick="blastWave()">Click Me!</button>
+    <div class="output">
+        
+    </div>
+    <a href="next.html">Next</a>
 
-
-
-
-    </body>
+</body>
 </html>
